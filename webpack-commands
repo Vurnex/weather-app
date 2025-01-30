@@ -1,0 +1,2 @@
+Start: npm start
+Kill port: npx kill-port 8080
