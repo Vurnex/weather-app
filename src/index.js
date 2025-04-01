@@ -6,10 +6,30 @@ function component() {
     const element = document.createElement('div');
 
     // Lodash, currently included via a script, is required for this line to work
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+    //element.innerHTML = _.join(['Hello', 'webpack'], ' ');
   
     return element;
   
 }
 
 document.body.appendChild(component());
+
+const searchForm = document.getElementById("searchForm");
+const searchInput = document.getElementById("searchInput");
+const searchBtn = document.getElementById("searchBtn");
+const searchResult = document.getElementById("searchResult");
+
+
+searchForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+  });
+
+
+searchBtn.addEventListener("click", async () => {
+
+    searchResult.classList.add("active");
+
+    //if (searchInput.value === "") return;
+    //const weatherData = await weather.getData(searchInput.value);
+    //view.setSearchResult(weatherData);
+  });
