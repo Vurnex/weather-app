@@ -29,7 +29,13 @@ searchBtn.addEventListener("click", async () => {
 
     searchResult.classList.add("active");
 
+    if (searchInput.value != "") {
+
+        console.log(searchInput.value);
+    }
+
     //if (searchInput.value === "") return;
     //const weatherData = await weather.getData(searchInput.value);
     //view.setSearchResult(weatherData);
   });
+
