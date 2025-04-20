@@ -39,3 +39,19 @@ searchBtn.addEventListener("click", async () => {
     //view.setSearchResult(weatherData);
   });
 
+fetch('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/chicago?key=Z54LFD8W85EJGQDCTJRFR4QQB', {
+  mode: 'cors'
+})
+  .then(function(response) {
+
+    return response.json();
+
+  })
+  .then(function(response) {
+
+    console.log(response);
+  })
+  .catch(function(err) {
+
+
+  });
