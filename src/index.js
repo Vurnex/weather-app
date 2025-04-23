@@ -1,12 +1,11 @@
 import _ from 'lodash'
 import './style.css';
 
+import weather from './functions/weather';
+
 function component() {
 
     const element = document.createElement('div');
-
-    // Lodash, currently included via a script, is required for this line to work
-    //element.innerHTML = _.join(['Hello', 'webpack'], ' ');
   
     return element;
   
@@ -32,11 +31,10 @@ searchBtn.addEventListener("click", async () => {
     if (searchInput.value != "") {
 
         console.log(searchInput.value);
+
+        weather(searchInput.value);
     }
 
-    //if (searchInput.value === "") return;
-    //const weatherData = await weather.getData(searchInput.value);
-    //view.setSearchResult(weatherData);
   });
 
 fetch('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/chicago?key=Z54LFD8W85EJGQDCTJRFR4QQB', {
@@ -50,6 +48,8 @@ fetch('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/service
   .then(function(response) {
 
     console.log(response);
+
+    console.log(response.currentConditions.feelslike)
   })
   .catch(function(err) {
 
