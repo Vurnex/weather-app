@@ -24,10 +24,11 @@ export default function weather(address) {
           humidity.textContent = `Humidity: ${response.currentConditions.humidity}`;
           windSpeed.textContent = `Wind Speed: ${response.currentConditions.windspeed}`;
       
-          //console.log(response.currentConditions.feelslike)
         })
         .catch(function(err) {
       
+            console.log(err);
+            
             alert("City not found");
         });
 }

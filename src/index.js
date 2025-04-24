@@ -30,28 +30,9 @@ searchBtn.addEventListener("click", async () => {
 
     if (searchInput.value != "") {
 
-        console.log(searchInput.value);
+        //console.log(searchInput.value);
 
         weather(searchInput.value);
     }
-
-  });
-
-fetch('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/chicago?key=Z54LFD8W85EJGQDCTJRFR4QQB', {
-  mode: 'cors'
-})
-  .then(function(response) {
-
-    return response.json();
-
-  })
-  .then(function(response) {
-
-    console.log(response);
-
-    console.log(response.currentConditions.feelslike)
-  })
-  .catch(function(err) {
-
 
   });
